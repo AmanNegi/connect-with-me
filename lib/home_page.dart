@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_web/configs.dart';
-import 'package:portfolio_web/particle_page.dart';
+import 'package:connectwithme/configs.dart';
+import 'package:connectwithme/particle_page.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatefulWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_web/colors.dart';
-import 'package:portfolio_web/configs.dart';
-import 'package:portfolio_web/home_page.dart';
+import 'package:connectwithme/colors.dart';
+import 'package:connectwithme/configs.dart';
+import 'package:connectwithme/home_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

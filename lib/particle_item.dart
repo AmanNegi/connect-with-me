@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio_web/particle_page.dart';
+import 'package:connectwithme/particle_page.dart';
 
 class ParticleItem extends StatefulWidget {
   final AnimationController controller;

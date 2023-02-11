@@ -1,4 +1,4 @@
-package com.example.portfolio_web
+package com.example.connectWithMe
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,8 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:portfolio_web/particle_constraints.dart';
-import 'package:portfolio_web/particle_item.dart';
+import 'package:connectwithme/particle_constraints.dart';
+import 'package:connectwithme/particle_item.dart';
 
 class ParticlePage extends StatefulWidget {
   final int count;
