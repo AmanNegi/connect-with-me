@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_web/colors.dart';
 import 'package:portfolio_web/configs.dart';
 import 'package:portfolio_web/home_page.dart';
@@ -18,12 +17,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Aman Negi',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: colorList[1],
         ),
-        fontFamily: GoogleFonts.poppins().fontFamily,
+        fontFamily: "Poppins",
       ),
       home: const HomePage(),
     );

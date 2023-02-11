@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:portfolio_web/configs.dart';
 import 'package:portfolio_web/particle_page.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -54,24 +52,24 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     HoverableItem(
-                        icon: MdiIcons.github,
+                        icon: "assets/github.png",
                         onPressed: () {
                           launchUrl(Uri.parse(configs.value['github']));
                         }),
                     HoverableItem(
-                      icon: MdiIcons.twitter,
+                      icon: "assets/twitter.png",
                       onPressed: () {
                         launchUrl(Uri.parse(configs.value['twitter']));
                       },
                     ),
                     HoverableItem(
-                      icon: MdiIcons.devTo,
+                      icon: "assets/devpost.png",
                       onPressed: () {
                         launchUrl(Uri.parse(configs.value['devpost']));
                       },
                     ),
                     HoverableItem(
-                      icon: MdiIcons.linkedin,
+                      icon: "assets/linkedin.png",
                       onPressed: () {
                         launchUrl(Uri.parse(configs.value['linkedin']));
                       },
@@ -89,7 +87,7 @@ class _HomePageState extends State<HomePage> {
             quarterTurns: -1,
             child: Text(
               "BUILD USING FLUTTER",
-              style: GoogleFonts.ubuntu(
+              style: TextStyle(
                   fontSize: 26,
                   color: Colors.white.withOpacity(0.1),
                   fontWeight: FontWeight.w700,
@@ -103,7 +101,7 @@ class _HomePageState extends State<HomePage> {
 }
 
 class HoverableItem extends StatefulWidget {
-  final IconData icon;
+  final String icon;
   final Function onPressed;
   const HoverableItem({
     super.key,
@@ -123,13 +121,14 @@ class _HoverableItemState extends State<HoverableItem> {
     return MouseRegion(
       onEnter: (e) => setState(() => isHovering = true),
       onExit: (e) => setState(() => isHovering = false),
-      child: IconButton(
-        icon: Icon(
+      child: GestureDetector(
+        child: Image.asset(
           widget.icon,
           color: isHovering ? const Color(0xFF00b4d8) : Colors.white,
-          size: isHovering ? 40 : 24,
+          height: isHovering ? 40 : 24,
+          width: isHovering ? 40 : 24,
         ),
-        onPressed: () {
+        onTap: () {
           setState(() {});
           widget.onPressed();
         },
