@@ -58,7 +58,6 @@ class _ParticleItemState extends State<ParticleItem> {
 
       nextPosition.addListener(handler);
     }
-    // setState(() {});
   }
 
   Future<Offset> getNextPositionOffthread() {

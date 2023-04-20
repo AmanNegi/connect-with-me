@@ -45,7 +45,6 @@ class _ParticlePageState extends State<ParticlePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: const Color(0xFF03045e),
       body: Stack(
         children: [
           Positioned.fill(

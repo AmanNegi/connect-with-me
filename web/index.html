@@ -37,49 +37,9 @@
       var serviceWorkerVersion = null;
     </script>
 
-    <!-- TODO: Make this efficient -->
+    <!-- * Fonts and Image preloader (configs, manifest, images) -->
 
-    <!-- * Preloads the script-->
-    <!-- <script>
-      const preloadLink = document.createElement("link");
-      preloadLink.href = "flutter.js";
-      preloadLink.rel = "preload";
-      preloadLink.as = "script";
-      document.head.appendChild(preloadLink);
-    </script> -->
-
-    <!--? Uses the script -->
-    <!--
-    <script>
-      var usedLaterScript = document.createElement("script");
-      usedLaterScript.src = "https://amannegi.github.io/amannegi/flutter.js";
-      document.body.appendChild(usedLaterScript);
-    </script> -->
-
-    <!-- * Preloads the script, but don't know how to run when DOM rendering completed-->
-    <!-- <link
-      rel="preload"
-      href="https://amannegi.github.io/amannegi/flutter.js"
-      as="script"
-      crossorigin
-    />
-    -->
-
-    <!-- <link rel="preload" href="flutter.js" as="script" crossorigin /> -->
-
-    <!-- <script defer>
-      var usedLaterScript = document.createElement("script");
-      usedLaterScript.src = "flutter.js";
-      document.body.appendChild(usedLaterScript);
-    </script> -->
-
-    <!--! Fonts & Icons -->
-    <link
-      rel="preload"
-      href="assets/fonts/MaterialIcons-Regular.otf"
-      as="font"
-      crossorigin
-    />
+    <!--! Preload Fonts  -->
     <link
       rel="preload"
       href="assets/fonts/Poppins-Regular.ttf"
@@ -87,7 +47,7 @@
       crossorigin
     />
 
-    <!--! Images -->
+    <!--! Preload Images -->
     <link
       rel="preload"
       href="assets/assets/github.png"
@@ -114,7 +74,7 @@
     />
     <link rel="preload" href="favicon.png" as="fetch" crossorigin />
 
-    <!-- ! Other Files -->
+    <!-- ! Preload Other Files -->
 
     <link
       rel="preload"
@@ -134,13 +94,13 @@
       as="fetch"
       crossorigin
     />
-    <!-- TODO: Add Fonts and Image preloader (configs, manifest, images) -->
 
     <!-- This script adds the flutter initialization JS code -->
     <script src="flutter.js" defer></script>
 
     <!-- Recommended to get Script Beforehand-->
   </head>
+  
   <body style="background-color: #03045e">
     <script>
       window.addEventListener("load", function (ev) {

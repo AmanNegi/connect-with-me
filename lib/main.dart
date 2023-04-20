@@ -5,7 +5,7 @@ import 'package:connectwithme/home_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
+  // Get values from the `configs.json` file
   configs.value = await getConfigsData();
 
   runApp(const MyApp());
@@ -17,7 +17,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Aman Negi',
+      debugShowCheckedModeBanner: false,
+      title: configs.value['name'],
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: colorList[1],

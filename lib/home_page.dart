@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
               Text(
                 configs.value['name'],
                 style: const TextStyle(
-                  color: Color(0xFFcaf0f8),
+                  color: Color.fromARGB(255, 255, 255, 255),
                   fontSize: 45,
                   fontWeight: FontWeight.w900,
                 ),
@@ -47,6 +47,7 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(height: 20),
               SizedBox(
                 width: 250,
+                height: 40,
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -118,20 +119,23 @@ class _HoverableItemState extends State<HoverableItem> {
 
   @override
   Widget build(BuildContext context) {
-    return MouseRegion(
-      onEnter: (e) => setState(() => isHovering = true),
-      onExit: (e) => setState(() => isHovering = false),
-      child: GestureDetector(
-        child: Image.asset(
-          widget.icon,
-          color: isHovering ? const Color(0xFF00b4d8) : Colors.white,
-          height: isHovering ? 40 : 24,
-          width: isHovering ? 40 : 24,
+    return SizedBox(
+      height: isHovering ? 40 : 30,
+      width: isHovering ? 40 : 30,
+      child: MouseRegion(
+        onEnter: (e) => setState(() => isHovering = true),
+        onExit: (e) => setState(() => isHovering = false),
+        child: GestureDetector(
+          child: Image.asset(
+            widget.icon,
+            color: isHovering ? const Color(0xFF00b4d8) : Colors.white,
+            fit: BoxFit.cover,
+          ),
+          onTap: () {
+            setState(() {});
+            widget.onPressed();
+          },
         ),
-        onTap: () {
-          setState(() {});
-          widget.onPressed();
-        },
       ),
     );
   }
